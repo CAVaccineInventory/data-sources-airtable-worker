@@ -23,6 +23,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
+      env:
+          AIRTABLE_KEY: ${{ secrets.AIRTABLE_KEY }}
+          AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
+          GH_KEY: ${{ secrets.GH_KEY }}
+          GH_USER: ${{ secrets.GH_USER }}
+          REPO: ${{ secrets.REPO }}
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
