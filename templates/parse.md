@@ -1,5 +1,7 @@
 [![learn our pipeline: parse](https://img.shields.io/static/v1?label=learn%20our%20pipeline&message=parse&style=social)](https://github.com/CAVaccineInventory/vaccine-feed-ingest/wiki/Runner-pipeline-stages#parse)
 
+Blocked by #[issueNumber]
+
 Parse existing data into [`.ndjson`](http://ndjson.org/).
 
 Read all files in the directory passed as the second argument (`sys.argv[2]`), convert them to `.ndjson`, and then output them to new files in the directory passed as the first argument (`sys.argv[1]`).

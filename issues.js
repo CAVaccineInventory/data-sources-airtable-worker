@@ -25,25 +25,25 @@ async function createFetchIssue(runnerPath, url) {
 	return issue.data.number
 }
 
-async function createParseIssue(runnerPath) {
+async function createParseIssue(runnerPath, blockedBy) {
 	console.log(`Creating parse issue for ${runnerPath}...`)
 	const issue = await octokit.rest.issues.create({
 		owner: user,
 		repo: repo,
 		title: `parse ${runnerPath}`,
-		body: parseContents.replace(/\[runnerPath\]/g, runnerPath),
+		body: parseContents.replace(/\[runnerPath\]/g, runnerPath).replace(/\[issueNumber\]/g, blockedBy),
 		labels: ['runner/parse']
 	})
 	return issue.data.number
 }
 
-async function createNormalizeIssue(runnerPath) {
+async function createNormalizeIssue(runnerPath, blockedBy) {
 	console.log(`Creating normalize issue for ${runnerPath}...`)
 	const issue = await octokit.rest.issues.create({
 		owner: user,
 		repo: repo,
 		title: `normalize ${runnerPath}`,
-		body: normalizeContents.replace(/\[runnerPath\]/g, runnerPath),
+		body: normalizeContents.replace(/\[runnerPath\]/g, runnerPath).replace(/\[issueNumber\]/g, blockedBy),
 		labels: ['runner/normalize']
 	})
 	return issue.data.number

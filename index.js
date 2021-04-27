@@ -42,8 +42,8 @@ async function createIssues() {
 
 		// make issue
 		let fetchNum = await issues.createFetchIssue(runnerPath, url)
-		let parseNum = await issues.createParseIssue(runnerPath)
-		let normalizeNum = await issues.createNormalizeIssue(runnerPath)
+		let parseNum = await issues.createParseIssue(runnerPath, fetchNum)
+		let normalizeNum = await issues.createNormalizeIssue(runnerPath, parseNum)
 
 		let res = await airtable.update(r.id, {
 			fetch_issue_id: fetchNum.toString(),

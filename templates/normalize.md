@@ -1,5 +1,7 @@
 [![learn our pipeline: normalize](https://img.shields.io/static/v1?label=learn%20our%20pipeline&message=normalize&style=social)](https://github.com/CAVaccineInventory/vaccine-feed-ingest/wiki/Runner-pipeline-stages#normalize)
 
+Blocked by #[issueNumber]
+
 Normalize existing [`.ndjson`](http://ndjson.org/) records into [the Vaccinate The States data schema](https://github.com/CAVaccineInventory/vaccine-feed-ingest/wiki/Normalized-Location-Schema).
 
 Read all files in the directory passed as the second argument (`sys.argv[2]`), transform each record into the normalized schema (filling in as much detail as possible), then output them to new files in the directory passed as the first argument (`sys.argv[1]`).
