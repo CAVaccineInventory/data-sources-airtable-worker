@@ -1,0 +1,16 @@
+{
+  "name": "data-sources-airtable",
+  "version": "1.0.0",
+  "description": "Polls Vaccinate The States' data source tracking Airtable and automatically creates issues for newly approved sources.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Theo Bleier <me@tmb.sh>",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^18.5.3",
+    "airtable-plus": "^1.0.4",
+    "dotenv": "^8.2.0"
+  }
+}
