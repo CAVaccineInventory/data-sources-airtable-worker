@@ -2,7 +2,7 @@ const fs = require('fs')
 const { Octokit } = require("@octokit/rest");
 
 const octokit = new Octokit({
-	auth: process.env.GITHUB_KEY
+	auth: process.env.GH_KEY
 })
 
 const fetchContents = fs.readFileSync('./templates/fetch.md', 'utf8');
