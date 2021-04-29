@@ -6,8 +6,8 @@ const octokit = new Octokit({
 })
 
 const fetchContents = fs.readFileSync('./templates/fetch.md', 'utf8');
-const parseContents = fs.readFileSync('./templates/normalize.md', 'utf8');
-const normalizeContents = fs.readFileSync('./templates/parse.md', 'utf8');
+const parseContents = fs.readFileSync('./templates/parse.md', 'utf8');
+const normalizeContents = fs.readFileSync('./templates/normalize.md', 'utf8');
 
 
 const user = process.env.GH_USER
