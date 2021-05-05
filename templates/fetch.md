@@ -2,7 +2,7 @@
 
 Fetch data from: [url]
 
-Put your script in a file named: `[runnerPath]/fetch.sh` (or `fetch.sh`, etc.)
+Put your script in a file named: `[runnerPath]/fetch.py` (or `fetch.sh`, etc.)
 
 Store it (without processing) in a new file created in the directory passed as the first argument (`sys.argv[1]`).
 
