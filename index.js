@@ -45,6 +45,10 @@ async function createIssues() {
 		let parseNum = await issues.createParseIssue(runnerPath, fetchNum)
 		let normalizeNum = await issues.createNormalizeIssue(runnerPath, parseNum)
 
+		// TODO: add backoff-retry to airtable update. Without this, highly
+		// parallel jobs tend to overwhelm the airtable API throttling,
+		// resulting in issues being created but not noted in airtable.
+		// Alternatively, restructure to diminish airtable calls.
 		let res = await airtable.update(r.id, {
 			fetch_issue_id: fetchNum.toString(),
 			parse_issue_id: parseNum.toString(),
