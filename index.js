@@ -46,7 +46,7 @@ async function createIssues() {
 		// parallel jobs tend to overwhelm the airtable API throttling,
 		// resulting in issues being created but not noted in airtable.
 		// Alternatively, restructure to diminish airtable calls.
-		let res = asyncAirtable.updateRecord(TABLE_NAME, {
+		let res = await asyncAirtable.updateRecord(TABLE_NAME, {
 			id: r.id, fields: {
 				fetch_issue_id: fetchNum.toString(),
 				parse_issue_id: parseNum.toString(),
