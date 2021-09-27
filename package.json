@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^18.5.3",
-    "airtable-plus": "^1.0.4",
+    "asyncairtable": "^2.1.0",
     "dotenv": "^8.2.0"
   }
 }
